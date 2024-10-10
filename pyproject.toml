@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "basic-project"
+version = "0.1.0"
+description = ""
+authors = ["hakhyeon"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.115.0"
+uvicorn = "^0.31.1"
+sqlalchemy = "^2.0.35"
+alembic = "^1.13.3"
+python-dotenv = "^1.0.1"
+pydantic-settings = "^2.5.2"
+pymysql = "^1.1.1"
+cryptography = "^43.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
