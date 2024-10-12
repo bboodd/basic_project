@@ -2,6 +2,7 @@ from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
 from sqlalchemy import text
 from app.core.db import get_db
+import os
 
 from app.core.config import settings
 
@@ -10,7 +11,7 @@ app = FastAPI()
 @app.get("/")
 def read_root():
     return {"message": "Hello World",
-            "db":settings.SQLALCHEMY_DATABASE_URL}
+            "db": settings.DATABASE_URL}
 
 @app.get("/db-check")
 def check_database(db: Session = Depends(get_db)):
